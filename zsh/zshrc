@@ -22,6 +22,8 @@ autoload -Uz _zinit
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
 
+zinit light zsh-users/zsh-apple-touchbar
+
 # Plugin history-search-multi-word loaded with tracking.
 zinit load zdharma/history-search-multi-word
 
@@ -31,3 +33,6 @@ zinit light sindresorhus/pure
 
 zinit ice from"gh-r" as"program"
 zinit load junegunn/fzf-bin
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
