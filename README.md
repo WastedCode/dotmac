@@ -1,5 +1,7 @@
 # dotmac - Dot files for Mac
 
+This is a very simple setup for using iterm2, zsh, vim and golang on a mac
+
 ## Prerequisites 
 Please install 
 - iterm2
