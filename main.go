@@ -11,7 +11,7 @@ func main() {
 
 	fmt.Print("Install binaries? ")
 	if getYesNo() {
-		run("brew", "install", "macvim", "tmux")
+		run("brew", "install", "macvim", "tmux", "golangci/tap/golangci-lint")
 	}
 
 	fmt.Println("Make symbolic links")

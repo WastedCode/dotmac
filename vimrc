@@ -18,6 +18,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'vim-airline/vim-airline'
+Plugin 'dense-analysis/ale'
+Plugin 'vim-syntastic/syntastic'
 
 call vundle#end()
 filetype plugin indent on  
@@ -37,3 +39,7 @@ let g:go_info_mode='gopls'
 set background=dark
 syntax on
 colorscheme solarized8
+
+let g:ale_linters = {
+\   'go': ['golangci-lint'],
+\}
