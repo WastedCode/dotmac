@@ -20,6 +20,7 @@ Plugin 'lifepillar/vim-solarized8'
 Plugin 'vim-airline/vim-airline'
 Plugin 'dense-analysis/ale'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()
 filetype plugin indent on  

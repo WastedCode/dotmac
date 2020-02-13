@@ -8,13 +8,14 @@ import (
 
 func main() {
 	fmt.Println("dotmac starting")
-
 	fmt.Print("Install binaries? ")
+
 	if getYesNo() {
-		run("brew", "install", "macvim", "tmux", "golangci/tap/golangci-lint")
+		run("brew", "install", "macvim", "tmux", "golangci/tap/golangci-lint", "node")
 	}
 
 	fmt.Println("Make symbolic links")
+
 	if getYesNo() {
 		run("ln", "-s", "~/.dotmac/tmux/tmux.conf", "~/.tmux.conf")
 		run("ln", "-s", "~/.dotmac/zsh/zshrc", "~/.zshrc")
@@ -24,6 +25,7 @@ func main() {
 
 func getYesNo() bool {
 	fmt.Print("Y/n: ")
+
 	switch strings.ToLower(getInput()) {
 	case "yes", "", "y":
 		return true
@@ -35,6 +37,7 @@ func getYesNo() bool {
 func getInput() string {
 	var input string
 	_, err := fmt.Scanln(&input)
+
 	if err != nil {
 		panic(err)
 	}
@@ -45,6 +48,7 @@ func getInput() string {
 func run(cmd string, args ...string) {
 	c := exec.Command(cmd, args...)
 	out, err := c.Output()
+
 	if err != nil {
 		panic(err)
 	}
