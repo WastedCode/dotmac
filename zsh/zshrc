@@ -36,3 +36,6 @@ zinit load junegunn/fzf-bin
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# GoLang setup
+export GOPATH=~/go
+export PATH=$GOPATH/bin:$PATH
